@@ -1,0 +1,406 @@
+body {
+	margin: 0;
+}
+/* main page */
+.main {
+	background: url(images/galaxy2.png);
+	height: 100%;
+	position: relative;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.resources-container {
+	list-style-type: none;
+	color: transparent;
+	width: 70%;
+	height: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.resource {
+	width: 30%;
+	display: inline-block;
+	height: 44%;
+	font-size: 52px;
+	position: relative;
+	z-index: 10;
+	margin-right: 4%;
+	margin-bottom: 3%;
+	opacity: 85%;
+}
+
+.resource:hover {
+	opacity: 100%;
+	cursor: pointer;
+}
+
+.resource:last-child {
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
+.resource:nth-child(3) {
+	margin-right: 0;
+}
+
+.resource:nth-child(4) {
+	margin-bottom: 0;
+}
+
+.resource:nth-child(5) {
+	margin-bottom: 0;
+}
+
+.resource p {
+	display: inline-block;
+}
+
+.resource div {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 100%;
+	width: 100%;
+}
+
+.resource:after {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	transform: translate(50%, 0);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.resource.films div {
+	background-image: url(images/films.png);
+}	
+
+.resource.films:after {
+	content: "";
+	width: 60%;
+	height: 60%;
+	background-image: url(images/camera.png);
+}
+
+.resource.people div {
+	background-image: url(images/people.png);
+}
+
+.resource.people:after {
+	content: "";
+	width: 60%;
+	height: 62%;
+	background-image: url(images/luke.png);
+}
+
+.resource.planets div {
+	background-image: url(images/planets.png);
+}
+
+.resource.planets:after {
+	content: "";
+	width: 44%;
+	height: 60%;
+	background-image: url(images/tattoine.png);
+}
+
+.resource.species div {
+	background-image: url(images/species.png);
+}
+
+.resource.species:after {
+	content: "";
+	width: 60%;
+	height: 56%;
+	background-image: url(images/wookie.png);
+}
+
+.resource.starships div {
+	background-image: url(images/starships.png);
+}
+
+.resource.starships:after {
+	content: "";
+	width: 42%;
+	height: 60%;
+	background-image: url(images/deathstar.png);
+}
+
+.resource.vehicles div {
+	background-image: url(images/vehicles.png);
+}	
+
+.resource.vehicles:after {
+	content: "";
+	width: 60%;
+	height: 60%;
+	background-image: url(images/sandcrawler.png);
+}
+
+/* grid */
+.main_grid {
+	width: calc(100% - 1px);
+	height: 100%;
+	background: #272B30;
+}
+
+.grid_icon {
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	background-repeat: no repeat;
+	background-size: 100% 100%;
+	margin: auto;
+}
+
+.grid_icon.planets {
+	background-image: url(images/planet_icon.png);
+}
+
+.grid_icon.characters {
+	background-image: url(images/people_icon.png);
+}
+
+.grid_icon.starships {
+	background-image: url(images/starship_icon.png);
+}
+
+.grid_icon.vehicles {
+	background-image: url(images/vehicle_icon.png);
+}
+
+.grid_icon.species {
+	background-image: url(images/specie_icon.png);
+}
+
+.grid_icon.films {
+	background-image: url(images/film_icon.png);
+}
+
+.grid_icon.opening_crawl {
+	background-image: url(images/crawl_icon.png);
+}
+
+.grid_icon.info {
+	background-image: url(images/open.png);
+}
+
+.main_grid_title {
+	width: calc(100% - 9px);
+    height: 40px;
+    color: white;
+    background: linear-gradient(180deg, rgba(25,26,27,1) 0%, rgba(103,110,120,1) 100%);
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+    font-size: 32px;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+.main_grid_title > button.back {
+	float: right;
+    background: url(images/back.png);
+    width: 54px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-right: 20px;
+    margin-top: 2px;
+    border: 0;
+    cursor: pointer;
+	outline: none !important;
+}
+
+.main_grid_title > button.search {
+	float: right;
+    background: url(images/search.png);
+    width: 24px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-right: 58px;
+    margin-top: 9px;
+    border: 0;
+    cursor: pointer;
+	outline: none !important;
+}
+
+.main_grid_title > input {
+	float: right;
+	margin-right: 12px;
+    margin-top: 3px;
+    height: 28px;
+    width: 230px;
+}
+
+/* jsGrid styles */
+.jsGrid {
+	height: calc(100% - 48px) !important;
+	font-family: Arial, sans-serif;
+}
+
+.jsgrid-grid-body {
+	height: calc(100% - 36px) !important;
+}
+
+.jsgrid-header-row > .jsgrid-header-cell {
+	background: linear-gradient(180deg, rgba(66,72,78,1) 0%, rgba(119,126,135,1) 100%);
+	color: white;
+}
+
+.jsgrid-row > .jsgrid-cell,
+.jsgrid-row.jsgrid-selected-row  > .jsgrid-cell {
+	background: #8b8f99;
+    color: #e8be1e;
+	border-color: #f3f3f3;
+	cursor: auto;
+}
+
+.jsgrid-alt-row > .jsgrid-cell,
+.jsgrid-alt-row.jsgrid-selected-row  > .jsgrid-cell  {
+	background: #666a73;
+    color: #e8be1e;
+	border-color: #f3f3f3;
+	cursor: auto;
+}
+
+.jsgrid-header-sort-asc:before {
+	border-color: transparent transparent #e8be1e;
+	margin-top: 6px;
+    margin-left: 1px;
+    position: absolute;
+}
+
+.jsgrid-header-sort-desc:before {
+	border-color: #e8be1e transparent transparent;
+	margin-top: 6px;
+    margin-left: 1px;
+    position: absolute;
+}
+
+/* dialog */
+.ui-dialog .jsGrid {
+	height: calc(100% - 35px) !important;
+	background: #272B30;
+}
+
+.ui-dialog .jsGrid  .jsgrid-grid-body{
+	height: calc(100% - 36px) !important;
+}
+
+.ui-dialog {
+	height: 80% !important;
+	top: 50% !important;
+	transform: translate(-50%, -50%);
+	width: 70% !important;
+    left: 50% !important;
+}
+
+.ui-dialog .ui-dialog-content {
+	padding: 0;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+	background: linear-gradient(180deg, rgba(66,72,78,1) 0%, rgba(131,138,147,1) 100%);
+    color: white;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+	background: url(images/close.png);
+	border: 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-right: 4px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close.ui-button .ui-icon {
+	background: transparent;
+}
+
+.ui-dialog .ui-dialog-titlebar-close.ui-button:focus {
+	outline: none;
+}
+
+.ui-dialog.info_dialog {
+	width: 35% !important;
+	background: #45484f;
+}
+
+.ui-dialog.info_dialog .ui-dialog-content{
+	height: calc(100% - 38px) !important;
+    padding: 5px 5px 0 5px;
+}
+
+.ui-dialog.info_dialog table{
+	color: #e8be1e;
+}
+
+.ui-dialog.info_dialog  td:first-child {
+	width: 150px;
+	border-right: 10px solid transparent;
+	font-weight: bold;
+}
+
+.ui-dialog.info_dialog  td {
+	border-bottom: 10px solid transparent;
+}
+
+.ui-dialog.info_dialog  td .grid_icon {
+	margin: 0;
+}
+
+/* opening crawl */
+.opening_crawl_container {
+  margin: 0;
+  padding: 0;
+  background: #000 url('images/galaxy.jpg') center;
+  font-size: 16px;
+  font-family: impact;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+}
+
+.opening_crawl_container > button {
+	float: right;
+    background: url(images/back.png);
+    width: 54px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-right: 20px;
+    margin-top: 2px;
+    border: 0;
+    cursor: pointer;
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	top: 8px;
+}
+
+.starwars-page {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  perspective: 500px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.starwars-intro {
+  top: 0%;
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  font-size: 1.8em;
+  color: #e8be1e;
+  text-align: justify;
+  transform: rotateX(30deg) scale(2);
+}
